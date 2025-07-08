@@ -4,6 +4,11 @@ This project detects driver drowsiness using **EMG (Electromyography) signals** 
 
 ---
 
+## Demo Video
+https://www.youtube.com/watch?v=pSQxcGMXQZQ
+
+---
+
 ##  Key Features
 
 - Real-time EMG signal visualization using Biosignals, electrodes, arduino, matplotlib
@@ -11,7 +16,6 @@ This project detects driver drowsiness using **EMG (Electromyography) signals** 
 - Real time Sleep logging systems
 - Map and Fatigue Predictor – Input your journey destination, and using past sleep data, the system estimates when you are likely to experience drowsiness during the trip.
 - User Friendly cost effective app for admins and Drivers
-  
 
 ---
 
