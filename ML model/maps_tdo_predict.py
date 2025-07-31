@@ -1,4 +1,4 @@
-import openrouteservice
+import googlemaps
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -45,8 +45,8 @@ def get_place_name_from_coords(coords):
     return res['features'][0]['properties']['label']
 
 def get_route_data():
-    # --- OpenRouteService API for routing ---
-    client = openrouteservice.Client(key='API_key')
+    # --- GoogleMaps API for routing ---
+    client = googlemaps.Client(key='YOUR_GOOGLE_MAPS_API_KEY')
 
     start_place = input("Enter starting location: ")
     end_place = input("Enter destination location: ")
