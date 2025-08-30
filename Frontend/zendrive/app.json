@@ -13,7 +13,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.zendrive.app",
       "config": {
-        "googleMapsApiKey": "AIzaSyBZpxciKcrgqvuxRePOCjHGMBttZ7Kdu4w"
+        "googleMapsApiKey": "IOS_KEY_HERE"
       }
     },
     "android": {
@@ -24,7 +24,7 @@
       "package": "com.zendrive.app",
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyBZpxciKcrgqvuxRePOCjHGMBttZ7Kdu4w"
+          "apiKey": "ANDROID_KEY_HERE"
         }
       }
     },
