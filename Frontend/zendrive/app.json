@@ -8,13 +8,24 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "sdkVersion": "53.0.0",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zendrive.app",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBZpxciKcrgqvuxRePOCjHGMBttZ7Kdu4w"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.zendrive.app",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBZpxciKcrgqvuxRePOCjHGMBttZ7Kdu4w"
+        }
       }
     },
     "web": {

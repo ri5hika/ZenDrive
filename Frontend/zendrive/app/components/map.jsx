@@ -10,11 +10,12 @@ import {
   Modal,
   useColorScheme,
 } from "react-native";
-import MapView, { Polyline, Marker, UrlTile } from "react-native-maps";
+import MapView, { Polyline, Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import PanelSection from "./PanelSection";
 import OverlayPanel from "./OverlayPanel";
+import { GOOGLE_MAPS_CONFIG } from "../config/googleMaps";
 
-const StartCoord = { latitude: 28.855393, longitude: 78.771284 };
+const StartCoord = GOOGLE_MAPS_CONFIG.DEFAULT_REGION;
 
 const darkMapStyle = [
   {
@@ -129,25 +130,23 @@ const MapComponent = ({ children }) => {
       {/* Map View */}
       <MapView
         style={{ flex: 1 }}
-        initialRegion={{
-          latitude: StartCoord.latitude,
-          longitude: StartCoord.longitude,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
-        customMapStyle={darkMapStyle}
+        provider={PROVIDER_GOOGLE}
+        initialRegion={StartCoord}
+        customMapStyle={GOOGLE_MAPS_CONFIG.DARK_MAP_STYLE}
+        showsUserLocation={true}
+        showsMyLocationButton={true}
+        showsCompass={true}
+        showsScale={true}
+        showsTraffic={false}
+        showsBuildings={true}
+        showsIndoors={true}
       >
-        <UrlTile
-          urlTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-          maximumZ={19}
-        />
         {/* <Marker coordinate={ORIGIN} title="Start" />
         <Marker coordinate={destination} title="End" /> */}
         {routeCoords.length > 0 && (
           <Polyline
             coordinates={routeCoords}
-            strokeColor="#000"
-            strokeWidth={6}
+            {...GOOGLE_MAPS_CONFIG.ROUTE_STYLE}
           />
         )}
 
